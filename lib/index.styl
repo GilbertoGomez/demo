@@ -1,0 +1,230 @@
+@import 'nib'
+@font-face {
+  font-family: 'icon';
+  src:url('../fonts/icomoon.eot?-etyqoi');
+  src:url('../fonts/icomoon.eot?#iefix-etyqoi') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?-etyqoi') format('woff'),
+    url('../fonts/icomoon.ttf?-etyqoi') format('truetype'),
+    url('../fonts/icomoon.svg?-etyqoi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body
+  display flex
+  margin 0px auto
+  flex-direction column
+input
+  color grey
+button
+  color black
+.envoltura
+  overflow  hidden
+  background  #444
+  height 4em
+  transition all .4s linear
+  .bt-menu
+    display flex
+    justify-content flex-end
+    padding-top 15px
+    a
+      margin-right: 10px;
+      font-size: 20px;
+      
+    .menu-icon
+      padding-right .3em
+      margin 0
+      color rgb(255,255,255)
+      cursor pointer
+      font-family icon
+      font-size 30px
+      &:before
+        content "\e900"
+      
+  .menu
+    list-style none
+    visibility visible
+    justify-content center
+    display flex
+    margin-top 20px
+    ul 
+      list-style none
+      margin 0
+      padding 0
+      display flex
+    a
+      color  #fff
+      width  100%
+      height  auto
+      padding  0.75em 1em
+      cursor  pointer
+      text-decoration  none
+      outline none
+      
+      &:hover
+        background grey
+    .form
+      display flex
+      input[type="text"]
+        margin-left 1em
+        padding 1px
+        border solid 1px white
+        transition box-shadow 0.3s, border 0.2s
+        display block
+        margin 0
+        width 100%
+        font-family sans-serif
+        appearance none
+        box-shadow none
+        border-radius none
+      input[type="text"]:focus
+        box-shadow 0 0 2px 1px pink
+      .button
+        background lightblue none repeat scroll 0% 0%
+        border 0px none
+        font-size 20px
+        &:hover
+          background purple
+          color white
+          box-shadow 0 0 2px 1px white
+          transition box-shadow 0.3s, border 0.2s 
+.principal
+  font-size 0
+  img
+    box-sizing border-box
+    height 300px
+    width 100% !important
+  
+  .logo
+    margin 20px 20px
+    padding-right 20px
+.container
+  display flex
+  position relative
+  justify-content space-around
+  flex-wrap wrap
+  max-width 1300px
+  margin 0 auto
+
+  .post
+    flex-direction column
+    display flex
+    padding 0px 1%
+    box-sizing border-box 
+    
+    hr
+      text-align center
+      width 90%
+      display block
+      border-color #800080 transparent transparent
+      border-top 4px double purple
+
+    .picture
+      margin-top 10px
+      border 3px solid gainsboro
+      padding 5px
+      box-shadow 2px 2px 3px black
+      
+    .title-pos
+      position relative
+      margin 10px 0px
+      padding 0
+      width 320px
+      text-align center
+    
+    .info
+      margin 10px 0px 
+      color #6E6E6E
+      width 330px
+      display flex
+      justify-content flex-end
+      
+    .description
+      margin-bottom 5px
+      line-height 20px
+      width 300px
+    
+    .more
+      display flex
+      justify-content center
+      margin: 0.5em 0px;
+      height 20px
+      a
+        background-color: transparent;
+        text-decoration: none;
+        outline: none;
+        &:hover
+          background purple
+          color white
+          height 26px
+          padding .2em
+.menu-exp
+  height 17em
+
+footer
+  width 100%
+  background #000 none repeat scroll 0% 0%
+  color #FFF
+  justify-content center
+  height 100px
+  display flex !important
+  margin-top 1em
+  .facebook-icon
+    font-family icon
+    &:before
+      content "\e902"
+  .mail-icon
+    font-family icon
+    &:before
+      content "\e901"
+  .twitter-icon
+    font-family icon
+    &:before
+      content "\e903"
+  span
+    display flex
+    align-items center
+    padding 20px
+    font-size 40px
+    transition 1s ease-in-out
+    -moz-transition 1s ease-in-out
+    &:hover
+      -moz-transform rotate(360deg)
+      transform rotate(360deg)
+
+@media only screen and (min-width:700px)
+  .envoltura
+    height 4em
+    span
+      display none
+    .menu
+      clear none
+      visibility visible
+      display flex
+      justify-content center
+      width 100%
+      margin-top: 1em;
+
+@media only screen and (max-width:699px)
+  .envoltura
+    position relative
+    .collapse 
+      visibility hidden
+    .menu
+      flex-direction: column;
+      ul
+        display block
+      a
+        padding: 0.5em 1em;
+        display block
+        &:hover
+          background purple
+  form
+    display: flex;
+    padding: 10px 20px;
+    input
+      width 100%
+      
+@media only screen and (min-width:700px)
+  .collapse 
+    visibility inherit

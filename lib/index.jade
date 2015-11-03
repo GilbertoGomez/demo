@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		title Demo
+		link(rel="stylesheet" type="text/css" href="./public/css/index.css")
+	body
+		header.envoltura
+			div.bt-menu
+				a(href="#")
+					span.menu-icon
+			nav.menu.collapse
+				ul
+					li
+						a(href="#") Inicio
+					li
+						a(href="#") Blog
+					li
+						a(href="#") Demos
+					li
+						a(href="#") Contacto
+				form.form(action="buscar" id="#")
+					input.search(type="text" placeholder="¿Que estas buscando?")
+					button.button(type="button") Buscar
+		div.principal
+			img(data-src="holder.js/1300x300?theme=sky" alt="img")
+		main
+			div.container
+				each main in [1,2,3,4,5,6,7,8,9] 
+					include ./template-main.jade
+	footer
+		include ./template-footer.jade
+script(src="./public/js/demo.js")
+
+
+
